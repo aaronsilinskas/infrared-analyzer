@@ -1,0 +1,12 @@
+{
+    "circuitpythonsync.cpbaseversion": "10",
+    "circuitpythonsync.cpfullversion": "10.0.3",
+    "circuitpythonsync.curlibtag": "20260115",
+    "python.analysis.extraPaths": [
+        "/Users/AaronH/.vscode/extensions/wmerkens.vscode-circuitpython-v2-0.3.3/boards/0x239A/0x80F2",
+        "/Users/AaronH/.vscode/extensions/wmerkens.vscode-circuitpython-v2-0.3.3/stubs",
+        "/Users/AaronH/Library/Application Support/Code/User/globalStorage/wmerkens.vscode-circuitpython-v2/bundle/20250810/adafruit-circuitpython-bundle-py-20250810/lib",
+        "/Users/AaronH/Library/Application Support/Code/User/globalStorage/padgettholdings.circuitpythonsync/stubs/circuitpython_stubs-10.0.3"
+    ],
+    "circuitpythonsync.drivepath": "/Volumes/CIRCUITPY"
+}
