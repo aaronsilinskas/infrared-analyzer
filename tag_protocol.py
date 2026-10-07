@@ -1,7 +1,7 @@
 """
-Infrared protocol implementation for laser tag communication.
+Infrared protocol implementation for infrared tag communication.
 
-This module implements a custom infrared protocol for transmitting laser tag
+This module implements a custom infrared protocol for transmitting infrared tag
 game data including team, player, and damage information. The protocol uses
 pulse-width modulation to encode 7 bits of data with a distinctive preamble.
 
@@ -24,7 +24,7 @@ from protocol import InfraredDecoder, InfraredEncoder
 
 # Timing constants in microseconds
 TAG_ERROR_MARGIN = 500  # Maximum allowed timing deviation
-TAG_PREAMBLE = [3000, 6000, 3000]  # Laser tag start sequence
+TAG_PREAMBLE = [3000, 6000, 3000]  # Infrared tag start sequence
 
 TAG_MARK = 2000  # Duration of mark (ON) pulse for data bits
 TAG_SPACE_ZERO = 1000  # Duration of space (OFF) pulse for bit 0
@@ -40,7 +40,7 @@ TAG_TOTAL_PULSES = len(TAG_PREAMBLE) + TAG_DATA_BITS * 2
 
 class TagData:
     """
-    Container for laser tag shot data.
+    Container for infrared tag shot data.
 
     Attributes:
         team: Team number (0-3)
@@ -122,7 +122,7 @@ def encode_tag_data(tag_data: TagData) -> bytearray:
 
 class TagInfraredDecoder(InfraredDecoder):
     """
-    Decoder for the laser tag infrared protocol.
+    Decoder for the infrared tag infrared protocol.
 
     Decodes incoming infrared pulses into tag data bytes. Uses a state machine
     to validate the preamble, then decode data bits based on pulse widths.
@@ -191,7 +191,7 @@ class TagInfraredDecoder(InfraredDecoder):
 
 class TagInfraredEncoder(InfraredEncoder):
     """
-    Encoder for the laser tag infrared protocol.
+    Encoder for the infrared tag infrared protocol.
 
     Converts tag data bytes into pulse sequences for infrared transmission.
     Adds the protocol preamble and encodes each bit using pulse-width modulation.
